@@ -1,0 +1,278 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* = Courses
+-------------------------------------------------------------- */
+.course-row {
+	width: 100%;
+	float: left;
+	padding: 0px; 
+	border-bottom: 2px solid #ccc;
+	margin-bottom:0px;
+	overflow: hidden;
+	font-size: 14px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1000px;
+	}
+}
+.course-row a {
+	display: block;
+	overflow: hidden;
+	
+	color:#666;
+	font-weight:bold;
+}
+
+.course-row a:hover {
+		
+	@media screen and (min-width: $tabwidth) {
+		background-color: #047fc5;
+		color: #fff;
+	}
+}
+.course-header {
+	color: #047fc5;
+	font-size: 16px;
+	font-weight: bold;	
+	margin: 0;
+	font-family: 'Julius Sans One', sans-serif;
+	@media screen and (min-width: $tabwidth) {
+		margin-bottom: 20px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	&.desktop {
+		display: none;
+		@media screen and (min-width: $tabwidth) {
+			display: block;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+	&.mobile {
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+}
+.course-title {
+	width: 100%;
+	float:left;
+	
+	@media screen and (min-width: $tabwidth) {
+		padding: 5px;
+		width: 30%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 460px;
+	}
+}
+.course-date {
+	width: 100%;
+	float:left;
+	padding: 0;
+	@media screen and (min-width: $tabwidth) {
+		padding: 5px;
+		width: auto;
+		width: 10%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 120px;
+	}
+}
+.course-instructor {
+	width: 100%;
+	float:left;
+	@media screen and (min-width: $tabwidth) {
+		padding: 5px;
+		width: auto;
+		width: 20%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 130px;
+	}
+}
+.course-location {
+	width: 100%;
+	float:left;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+		padding: 5px;
+		width: 20%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 140px;
+	}
+}
+.course-register {
+	width:auto;
+	float:left;
+	padding: 5px;
+	border: 1px solid #047fc5;
+	margin: 0 0 20px 0;
+	@media screen and (min-width: $tabwidth) {
+		border: 0;
+		margin: 0;
+		width: 20%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 100px;
+	}
+}
+
+/* = Resources
+-------------------------------------------------------------- */
+.resources-column1 {
+	width: 100%;
+	
+	float:left;
+	padding-right: 20px;
+	@media screen and (min-width: $tabwidth) {
+		border-right: 1px solid #047FC5; 
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 500px;
+	}
+}
+
+.resources-column2 {
+	width: 100%;
+	float:right;
+	padding-left: 10px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 500px;
+	}
+}
+
+.resource { 
+	border-bottom: 1px solid #047FC5;
+	padding-top: 20px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+
+/* = Blog
+-------------------------------------------------------------- */
+.post-container {
+	width: 100%;
+	float:left;
+	margin-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		// width: 650px;
+	}
+}
+h1.archive-title {
+	margin: 0 0 20px 0;	
+}
+.single-meta {
+	width: 100%;
+	padding: 5px; 
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin: 10px 0 10px 0;
+	font-size: 12px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.category-list li {
+	float: left;
+	list-style: none !important;
+	background-image:none !important;
+	padding: px !important;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.category-list li a {
+	float: left;
+	list-style: none !important;
+	background-image:none !important;
+	padding: 5px !important;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.sociable li {
+	list-style: none !important;
+	background-image:none !important;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+.post-date {
+	color: #047FC5;
+	margin: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-bottom: 5px;
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}

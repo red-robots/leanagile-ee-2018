@@ -1,0 +1,225 @@
+#nav {
+	width: 100%;
+	background-color: #047fc5;
+	margin-top: -0px;
+	position: relative;
+	z-index:10;
+	float: left;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+#nav-cont {
+	width: 100%;
+	margin: 0px auto;  
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1090px;
+	}
+}
+.main-navigation ul.nav-menu,
+	.main-navigation div.nav-menu > ul {
+		// display: inline-block !important;
+		width: 100%;
+		text-align: center;
+		background-color: #047fc5;
+	margin-top: -0px;
+	}
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+
+	ul {
+		margin: 0 ;
+		text-indent: 0;
+		padding: 20px 0px;
+		display: none;
+
+		ul {
+			
+			
+			z-index: 99999;
+			padding-top: 15px;
+			border-right: 0px solid #333;
+			@media screen and (min-width: $tabwidth) {
+				position: absolute;
+				top: 1.5em;
+				left: -999em;
+			}
+
+			ul {
+				top: 0;
+				left: -999em;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+					border-left: 0;
+					display: block;
+				}
+			}
+
+			a {
+				width: 100%;
+				
+				
+				display: block;
+				font-size: 12px;
+				line-height: 2.181818182;
+				padding: 8px 10px;	
+				white-space: normal;
+				border-right: 0px solid #333;
+				text-align: center;
+				@media screen and (min-width: $tabwidth) {
+					font-size: 14px;
+					width: 200px;
+					border-bottom: 1px solid #ededed;
+					text-align: left;
+					background: #047fc5;
+				}
+				@media screen and (min-width: $deskwidth) {
+
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+				background-color: #047fc5;
+				color: #444;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+			line-height: 1.5;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+		&:hover > a,
+		&.focus > a {
+		}
+		&.last a {
+			border-right: 0px solid #333;
+		}
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		border-bottom: 0;
+		color: #fff;
+		text-transform: uppercase;
+		white-space: nowrap;
+		margin: 0px 0px;
+		padding: 20px 0;
+		
+		font-family: 'Julius Sans One', sans-serif;
+		font-size:18px;
+		@media screen and (min-width: $tabwidth) {
+			border-right: 1px solid #333;
+			padding: 0 15px;
+			font-size:12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size:18px;
+			padding: 0 35px;
+		}
+		&:hover {
+			color: #000;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: #333;
+		font-weight: bold;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	// background-color: $color-green;
+	ul.sub-menu {
+		background-color: rgba(255,255,255,.1);
+	}
+	
+}
+
+
+@media screen and (min-width: $tabwidth) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+button.menu-toggle {
+	border: 0px;
+	text-shadow: none;
+	background-color: #fff;
+	color: #047fc5;
+	box-shadow: none;
+	width: auto;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 0;
+	text-transform: uppercase;
+	font: {
+		
+		weight :300;
+		size: 20px;
+	}
+	
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

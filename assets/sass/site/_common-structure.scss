@@ -1,0 +1,1016 @@
+* { -webkit-hyphens: none; }
+div {
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		// width: 1200px;
+		padding: 0px;
+	}
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		// width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	// width: 300px;
+	// height: 200px;
+	// background-image: url(images/logo.png);	
+	margin: 10px auto;
+	width: 250px;
+	height: 86px;
+	background: {
+		image: url(images/logo.png);	
+		size: cover;
+	}
+	
+
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 365px;
+		height: 126px;
+		z-index: 1;
+		margin: 0;
+		float:left;
+	}
+}
+.logo a, h1.logo a {
+	width: 250px;
+	height: 86px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 365px;
+		height: 126px;
+	}
+}
+
+/* Page structure */
+
+#main {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 1px 0 12px 8px #CCC, 0 -9px 0px 0px white, 12px 0 15px -4px #CCC, -12px 0 15px -4px #CCC;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1090px;
+	}
+}
+.newsletter-sec {
+	width: 96%;
+	float: left;
+	background-color: rgba(4,127,197,.05);
+	padding: 2%;
+	margin-bottom: 30px;
+	border-bottom: 5px solid rgba(4,127,197,1);
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.contact-left {
+	width: 100%;
+	float: left;
+	@media screen and (min-width: $tabwidth) {
+		width: 60%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.contact-right {
+	width: 100%;
+	float: right;
+	@media screen and (min-width: $tabwidth) {
+		width: 35%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+/* Blog */
+h1.page-title {
+	margin-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+#secondary {
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	a {
+		color: #666;
+		font-size: 12px;
+		text-decoration: underline;
+	}
+	li {
+		padding-left: 36px;
+		background-image: url('images/readmore.png');
+		background-repeat: no-repeat;
+		background-position: 20px 3px;
+		list-style:none;
+		margin-bottom: 5px;
+		color: #666;
+		font-size: 14px;
+
+		li a {
+			text-decoration:none;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	a {
+
+	}
+}
+.text-widget {
+	color: #666;
+	font-size: 12px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+#searchform {
+	margin-top: 20px;
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 20px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+h2.rounded {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #047fc5;
+	font-size: 16px;
+	text-decoration:none;
+	font-family: 'Julius Sans One', sans-serif;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+
+	
+.cat-item ul li {
+	padding-left: 36px;
+	list-style:none;
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 14px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+
+/* Header 
+-------------------------------------------------------------- */
+
+#header-cont {
+	width: 100%;
+	
+	background-color: #fff;
+	position:relative;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 126px;
+	}
+}
+#header {
+	width: 100%;
+	margin: 0px auto;	
+	position: relative;
+	background-color: #fff;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1090px;
+		height: 126px;
+	}
+}
+#top-header {
+	width: 100%;
+	background-color: #77AC48;
+	overflow: hidden;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+#top-header-inside {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px;	
+	overflow: hidden;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 950px;
+	}
+}
+#top-address {
+	width: auto; 
+	float: right;	
+	color: #fff;
+	font-size:12px;
+	margin-right: 10px;
+	margin-top: 5px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+/*#sociallinks {
+	width: 350px;
+	position: absolute;
+	top: -10px;
+	right: 0px;
+	z-index: 6;	
+	padding: 10px;
+	background-color: #92928a;
+	border-radius: 0px 0px 10px 10px;
+	color: #fff;
+}*/
+#sociallinks {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	z-index: 6;	
+	padding: 10px;
+	
+	color: #fff;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 380px;
+		float: right;
+		margin: -10px 0 7px 0;
+		background-color: #92928a;
+		border-radius: 0px 0px 10px 10px;
+	}
+	ul {
+		margin: 0px auto;
+		padding: 0px;
+		list-style-type: none;
+		z-index: 2;
+		position: relative;
+		
+		/*width: 310px;*/
+		@media screen and (min-width: $deskwidth) {
+			margin: 0px;
+			float: left;
+		}
+		li {
+			
+			position: relative;
+			margin: 0px 5px;
+			display: inline-block;
+			@media screen and (min-width: $deskwidth) {
+				float: left;
+			}
+		}
+		a {
+			text-decoration: none;
+			background-image: url(images/social.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: 31px;
+			text-indent: -9000px;
+			position: relative;
+		}
+	}
+	.twitter a {
+		width:36px;
+		background-position: -0px -5px;
+		position: relative;
+		&:hover {
+			background-position: -0px -42px;
+		}
+	}
+	.linkedin a {
+		width: 36px;
+		background-position: -39px -5px;
+		position: relative;
+		.linkedin a:hover {
+			background-position: -39px -42px;
+			
+		}
+	}
+}
+.otherinfo  {
+	width: auto;
+	color: rgba(#000,.6);
+	font-size: 12px;
+	padding: 20px 0;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 250px;
+		float:left;
+		color: #fff;
+		padding-top: 10px;
+	}
+	a {
+		color: rgba(#000,.6);
+		@media screen and (min-width: $deskwidth) {
+			color: #fff;
+		}
+	}
+}
+
+#websignupform {
+	width: 100%;
+	position: relative;
+	float: right;
+	z-index: 6;	
+	padding: 10px;
+	color: #333;
+	background-image: url(images/mail-icon.png);
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	background-position: 0px 10px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 320px;
+	}
+}
+input#newsletters {
+	width: auto;
+	text-align: right;	
+	color: #CCC;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 250px
+	}
+}
+input#go {
+	background-color: #92928A;
+	color: #fff;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.link,
+.link a,
+#SignUp .signupframe {
+	color: #226699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.link,
+.link a {
+	text-decoration: none;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+#SignUp .signupframe {
+	border: 1px solid #000000;
+	background: #ffffff;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+#SignUp .signupframe .required {
+	font-size: 10px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+/* Footer */
+#footer {
+	width: 100%;
+	overflow:hidden;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.site-info {
+	width: 100%;
+	margin: 10px auto 0px auto;
+	padding: 10px;
+	text-align: center;
+	color: #333;
+	font-size: 12px;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 950px;
+	}
+}
+.site-info p {
+	margin: 5px 0px;
+}
+.page-content {
+	overflow: hidden;
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;	
+	position: relative;
+	z-index: 1;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1070px;
+		padding: 20px 30px 20px 30px; 
+		margin: 0;
+	}
+}
+
+.home-page-content {
+	overflow: hidden;
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;	
+	position: relative;
+	z-index: 1;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1070px;
+		padding: 20px 30px 20px 30px; 
+		margin: 0;
+	}
+}
+.course-page-content {
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin-top: 10px;	
+	position: relative;
+	z-index: 3;
+	@media screen and (min-width: $tabwidth) {
+		padding: 20px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1030px;
+		padding: 20px 10px 20px 35px; 
+	}
+}
+
+/* = Page Templates 
+-------------------------------------------------------------- */
+.page-left {
+	width: 100%;
+	float:left;	
+	@media screen and (min-width: $tabwidth) {
+		width: 63%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 600px;
+	}
+}
+.page-right {
+	width: 100%;
+	float:right;	
+	@media screen and (min-width: $tabwidth) {
+		width: 33%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 315px;
+	}
+}
+.page-left-home {
+	width: 100%;
+	float:left;	
+	@media screen and (min-width: $tabwidth) {
+		width: 63%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 695px;
+	}
+}
+.page-right-home {
+	width: 100%;
+	float:right;
+	padding-left: 20px;	
+	@media screen and (min-width: $tabwidth) {
+		width: 33%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 315px;
+	}
+}
+.searchpage	{
+	width: 100%;
+	float: right;
+	margin-top: -20px;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.additional-courses {
+	width: 100%;
+	background-color: #92928a;
+	color: #fff;
+	margin-bottom: 20px;
+	background-image: url(images/home-box-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 265px 30px;
+	min-height: 50px;
+	font-size:13px;
+	line-height: 18px;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 275px;
+	}
+}
+.additional-courses {
+	
+	padding: 20px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.add-title {
+	font-weight: bold;
+	margin-bottom: 20px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.add-start-date {
+	
+}
+.hotel-link {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.hotel-link a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.hotel-link a:hover {
+	/*-webkit-box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.56);
+-moz-box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.56);
+box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.56);*/
+background-color: rgba(255,255,255,.3);
+}
+.mapit {
+	width: auto;
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+	margin-top: 10px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	a {
+		display: block;
+		padding: 5px;
+		background-color: rgba(255,255,255,.3);
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		text-decoration: none;
+		border-radius: 3px;
+		color: #fff;
+		&:hover {
+			display: block;
+			background-color: rgba(255,255,255,1);
+			color: red;
+		}
+	}
+}
+.register {
+	width: auto;
+	margin: 20px auto;
+	padding: 0px;	
+	font-size: 12px;
+	line-height: 22px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+/* = Home Page
+-------------------------------------------------------------- */
+.home-left {
+	width: 100%;
+	float:left;	
+	@media screen and (min-width: $tabwidth) {
+		width: 33%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 375px;
+	}
+}
+.home-right {
+	width: 475px;
+	height: 250px;
+	float:right;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}	
+}
+.home-box {
+	width: 90%;
+	margin: 10px auto 30px auto;
+	
+	overflow: hidden;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		float: left;
+		margin: 0 2% 30px 0;
+		width: 31%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		// width: 215px;
+		// margin: 0 15px 30px 0;
+	}
+}
+.home-box-pic {
+	width: 100%;
+	position: relative;
+	float: left;	
+	line-height: 0;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		// width: 215px;
+		// height: 170px;
+	}
+}
+.home-box-pic img {
+	
+	width: 100%;
+	height: auto;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		// position: absolute;	
+		// top: 0px;
+		// left:0px;
+	}
+}
+.home-box-bottom {
+	background-color: #92928a;
+	padding: 10px 10px 10px 10px;
+	// width: 195px;
+	color: #fff;
+	background-image: url(images/home-box-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 170px 20px;	
+	clear:both;
+	overflow: hidden;
+	line-height: 16px;
+	min-height:75px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	a {
+		display: block;
+		color: #fff;
+		
+	}
+}
+.bot-title {
+	width: 100%;
+	float:left;
+	text-transform: uppercase;
+	/*margin-bottom: 8px;*/
+	font-size: 14px;	
+	font-weight: bold;
+	@media screen and (min-width: $tabwidth) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 170px;
+		font-size: 14px;
+	}
+}
+.bot-excerpt {
+	font-size: 12px;
+	width: 100%;
+	float:left;
+	overflow: hidden;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 165px;
+	}
+}
+.sidebar-home-upcoming {
+	width: 315px;
+	height: 36px;
+	
+	text-indent: -9000px;
+	margin-left: -0px;
+	margin-top: 10px;
+	@media screen and (min-width: $tabwidth) {
+		background-image: url(images/upcoming-courses.png);
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 315px;
+	height: 36px;
+	}
+}
+.sidebar-courselist-cont {
+	width: auto;
+	
+		
+	@media screen and (min-width: $tabwidth) {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 300px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.sidebar-home-connect {
+	width: 315px;
+	height: 43px;
+	background-image: url(images/connect-with-us.png);
+	background-repeat: no-repeat;
+	text-indent: -9000px;
+	margin-left: -0px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 315px;
+		height: 43px;
+	}
+}
+.sidebar-home-send {
+	width: 315px;
+	height: 37px;
+	background-image: url(images/send-us-an-email.png);
+	background-repeat: no-repeat;
+	text-indent: -9000px;
+	margin-left: -0px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 315px;
+		height: 37px;
+	}
+}
+.sidebar-home-send-email {
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	color: #666;
+	text-transform: uppercase;
+	@media screen and (min-width: $tabwidth) {
+		text-align: right;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+.sidebar-home-send-email a {
+	color: #666;
+	text-decoration: none;
+}
+
+.sidebar-courselist {
+	width: 100%;
+	float:left;
+	position: relative;
+	font-size: 14px;	
+	line-height: 16px;
+	margin-bottom: 10px;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 280px;
+	}
+	a {
+		display: block;
+		padding: 5px;	
+		overflow: hidden;
+		color: #999;
+		&:hover {
+			display: block;
+			background-color: #047fc5;	
+			color: #fff;
+		}
+	}
+} 
+.sidebar-courselist-date {
+	width: auto;
+	float:left;
+	position: relative;	
+	font-weight: bold;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.sidebar-courselist-location {
+	width: auto;
+	float:right;
+	position: relative;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.sidebar-courselist-title {
+	width: 100%;
+	float:left;
+	position: relative;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 260px;
+	}
+}
+.seemoretweets {
+	width: auto;
+	float: right;
+	margin: 10px 0px 10px 0px;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}

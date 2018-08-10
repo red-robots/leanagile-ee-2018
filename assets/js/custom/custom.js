@@ -12,24 +12,24 @@ jQuery(document).ready(function ($) {
 	*	Current Page Active
 	*
 	------------------------------------*/
-	$("[href]").each(function() {
-    if (this.href == window.location.href) {
-        $(this).addClass("active");
-        }
-	});
+	// $("[href]").each(function() {
+ //    if (this.href == window.location.href) {
+ //        $(this).addClass("active");
+ //        }
+	// });
 
 	/*
 	*
 	*	Responsive iFrames
 	*
 	------------------------------------*/
-	var $all_oembed_videos = $("iframe[src*='youtube']");
+	// var $all_oembed_videos = $("iframe[src*='youtube']");
 	
-	$all_oembed_videos.each(function() {
+	// $all_oembed_videos.each(function() {
 	
-		$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
+	// 	$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
  	
- 	});
+ // 	});
 	
 	/*
 	*
@@ -45,26 +45,26 @@ jQuery(document).ready(function ($) {
 	*	Colorbox
 	*
 	------------------------------------*/
-	$('a.gallery').colorbox({
-		rel:'gal',
-		width: '80%', 
-		height: '80%'
-	});
+	// $('a.gallery').colorbox({
+	// 	rel:'gal',
+	// 	width: '80%', 
+	// 	height: '80%'
+	// });
 	
 	/*
 	*
 	*	Isotope with Images Loaded
 	*
 	------------------------------------*/
-	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 15
-			}
- 		 });
-	});
+	// var $container = $('#container').imagesLoaded( function() {
+ //  	$container.isotope({
+ //    // options
+	//  itemSelector: '.item',
+	// 	  masonry: {
+	// 		gutter: 15
+	// 		}
+ // 		 });
+	// });
 
 	/*
 	*
@@ -87,13 +87,13 @@ jQuery(document).ready(function ($) {
 	*	Equal Heights Divs
 	*
 	------------------------------------*/
-	$('.js-blocks').matchHeight();
+	// $('.js-blocks').matchHeight();
 
 	/*
 	*
 	*	Wow Animation
 	*
 	------------------------------------*/
-	new WOW().init();
+	// new WOW().init();
 
 });// END #####################################    END

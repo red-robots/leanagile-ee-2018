@@ -15,7 +15,7 @@
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/inc/scripts.php';
 
 /**
  * Custom Post Types.
@@ -71,33 +71,33 @@
 
 
 // Enqueueing all the java script in a no conflict mode
- function ineedmyjava() {
-	if (!is_admin()) {
+//  function ineedmyjava() {
+// 	if (!is_admin()) {
  
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3', true);
-		wp_enqueue_script('jquery');
+// 		wp_deregister_script('jquery');
+// 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3', true);
+// 		wp_enqueue_script('jquery');
 		
-		// other scripts...
-		wp_register_script(
-			'vendors',
-			get_bloginfo('template_directory') . '/assets/js/vendors.js',
-			array('jquery'),'20120206', 
-			true  );
-		wp_enqueue_script('vendors');
+// 		// other scripts...
+// 		wp_register_script(
+// 			'vendors',
+// 			get_bloginfo('template_directory') . '/assets/js/vendors.js',
+// 			array('jquery'),'20120206', 
+// 			true  );
+// 		wp_enqueue_script('vendors');
 
 
-		// other scripts...
-		wp_register_script(
-			'custom',
-			get_bloginfo('template_directory') . '/assets/js/custom.js',
-			array('jquery'), '20120206', 
-			true );
-		wp_enqueue_script('custom');
+// 		// other scripts...
+// 		wp_register_script(
+// 			'custom',
+// 			get_bloginfo('template_directory') . '/assets/js/custom.js',
+// 			array('jquery'), '20120206', 
+// 			true );
+// 		wp_enqueue_script('custom');
 		
-	}
-}
-add_action('wp_enqueue_scripts', 'ineedmyjava');
+// 	}
+// }
+// add_action('wp_enqueue_scripts', 'ineedmyjava');
 
 
 

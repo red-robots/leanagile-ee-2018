@@ -99,7 +99,34 @@ require get_template_directory() . '/inc/scripts.php';
 // }
 // add_action('wp_enqueue_scripts', 'ineedmyjava');
 
+/*
 
+Event Espresso Stuff
+
+*/
+//* Adjust register now button text in Event Espresso 4
+add_filter ('FHEE__EE_Ticket_Selector__display_ticket_selector_submit__btn_text', 'ee_register_now_button');
+
+function ee_register_now_button() {
+ return 'CONTINUE';
+}
+//* Adjust view details button text in Event Espresso 4
+add_filter ('FHEE__EE_Ticket_Selector__display_view_details_btn__btn_text', 'ee_view_details_button');
+
+function ee_view_details_button() {
+ return 'REPLACE ME';
+}
+function ee_proceed_to_button( $submit_button_text, EE_Checkout $checkout ) {
+ if ( ! $checkout instanceof EE_Checkout || ! $checkout->current_step instanceof EE_SPCO_Reg_Step || ! $checkout->next_step instanceof EE_SPCO_Reg_Step ) {
+  return $submit_button_text;
+ } 
+ if ( $checkout->next_step->slug() == 'payment_options' ) {
+  $submit_button_text = 'CONTINUE';
+ }
+ return $submit_button_text;
+}
+
+add_filter ( 'FHEE__EE_SPCO_Reg_Step__set_submit_button_text___submit_button_text', 'ee_proceed_to_button', 10, 2 );
 
 /*
 
@@ -350,6 +377,15 @@ function arphabet_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Main sidebar',
 		'id' => 'main_sidebar',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Event sidebar',
+		'id' => 'event_sidebar',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="rounded">',

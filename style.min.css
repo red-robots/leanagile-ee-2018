@@ -1473,7 +1473,9 @@ div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .wrapper{width:100%;margin:0 auto;padding:20px}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{padding:0}
-}.content-area{width:100%;margin:0 auto}
+}a.button{width:auto;display:inline-block;padding:15px 30px;color:#fff;background-color:#047fc5;font-size:20px;border-radius:5px;text-decoration:none;-webkit-transition:all ease .2s;transition:all ease .2s}
+a.button:hover{background-color:#70aa31}
+.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:0 auto}

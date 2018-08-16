@@ -60,7 +60,11 @@ get_header(); ?>
 
 </div><!-- #page left -->
 
-<?php get_sidebar(); ?>
+<?php if(get_post_type() == 'espresso_events') {
+        get_sidebar('events'); 
+        } else {
+          get_sidebar();
+        } ?>
 
 
 </div><!-- #content -->

@@ -9,6 +9,13 @@ jQuery(document).ready(function ($) {
 	
 	/*
 	*
+	*	Choose Credit card by default on registration checkout page.
+	*
+	------------------------------------*/
+	$('#ee-available-payment-method-inputs-paypal_pro').attr('checked',true);
+	
+	/*
+	*
 	*	Current Page Active
 	*
 	------------------------------------*/

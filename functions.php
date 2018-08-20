@@ -128,6 +128,32 @@ function ee_proceed_to_button( $submit_button_text, EE_Checkout $checkout ) {
 
 add_filter ( 'FHEE__EE_SPCO_Reg_Step__set_submit_button_text___submit_button_text', 'ee_proceed_to_button', 10, 2 );
 
+function espresso_filter_spco_submit_button_text( $submit_button_text, EE_Checkout $checkout ) {
+    if ( ! $checkout instanceof EE_Checkout || ! $checkout->current_step instanceof EE_SPCO_Reg_Step || ! $checkout->next_step instanceof EE_SPCO_Reg_Step ) {
+        return $submit_button_text;
+    }
+
+    // $checkout->revisit - whether this is the first time thru SPCO or not : false = first visit, true = return visit (ie repay or edit)
+    // details for the CURRENT SPCO Reg Step
+    // $checkout->current_step->slug();  ex: 'attendee_information', 'payment_options', 'finalize_registration'
+    // $checkout->current_step->name();
+    // details for the NEXT SPCO Reg Step that follows the CURRENT SPCO Reg Step
+    // $checkout->next_step->slug();
+    // $checkout->next_step->name();
+
+    if ( $checkout->next_step->slug() == 'finalize_registration' ) {
+        $submit_button_text = __( 'Pay Now', 'event_espresso' );
+    } else if ( $checkout->current_step->slug() == 'attendee_information' && $checkout->revisit ) {
+        $submit_button_text = sprintf( __( 'Welcome back. Proceed to %1$s', 'event_espresso' ), $checkout->next_step->name() );
+    } else if ( $checkout->current_step->slug() == 'attendee_information' ) {
+        $submit_button_text = sprintf( __( 'Proceed to Payment Options', 'event_espresso' ), $checkout->next_step->name() );
+    } else {
+        $submit_button_text = sprintf( __( 'Finished with %1$s? Go to %2$s', 'event_espresso' ), $checkout->current_step->name(), $checkout->next_step->name() );
+    }
+    return $submit_button_text;
+}
+add_filter( 'FHEE__EE_SPCO_Reg_Step__set_submit_button_text___submit_button_text', 'espresso_filter_spco_submit_button_text', 10, 2 );
+
 /*
 
 	Custom client login, link and title.

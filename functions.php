@@ -104,6 +104,12 @@ require get_template_directory() . '/inc/scripts.php';
 Event Espresso Stuff
 
 */
+// change promo code button text
+add_filter( 'FHEE__EED_Promotions___add_promotions_form_inputs__ee_promotion_code_submit__default', 'my_example_promotions_button_text' );
+function my_example_promotions_button_text( $text ) {
+    $text = 'Apply Promo Code';
+    return $text;
+}
 //* Adjust register now button text in Event Espresso 4
 add_filter ('FHEE__EE_Ticket_Selector__display_ticket_selector_submit__btn_text', 'ee_register_now_button');
 

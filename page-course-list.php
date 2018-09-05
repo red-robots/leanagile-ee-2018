@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div class="course-page-content">
 
-  <?php get_template_part('search-page-form'); ?>
+  <?php //get_template_part('search-page-form'); ?>
 
 <div class="entry-content">
 

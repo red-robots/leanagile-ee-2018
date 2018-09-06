@@ -35,10 +35,19 @@ get_header(); ?>
              ?>
             </div> 
 			<?php //the_content(); ?>
-            <?php
-//echo '<br/><h6 style="color:#2EA2CC;">'. __FILE__ . ' &nbsp; <span style="font-weight:normal;color:#E76700"> Line #: ' . __LINE__ . '</span></h6>';
+           
+<?php
 global $post;
+if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_archive() && espresso_display_ticket_selector_in_event_list() ))) :
 ?>
+<div class="event-tickets" style="clear: both;">
+	<?php espresso_ticket_selector( $post ); ?>
+</div>
+<!-- .event-tickets -->
+<?php elseif ( ! is_single() ) : ?>
+<?php espresso_view_details_btn( $post ); ?>
+<?php endif; ?>
+
 <div class="event-content">
 <?php if ( apply_filters( 'FHEE__content_espresso_events_details_template__display_entry_meta', TRUE )): ?>
 	<div class="entry-meta">
@@ -71,6 +80,8 @@ global $post;
  ?>
 </div>
 <!-- .event-content -->
+
+
        
             
            <div class="single-meta">

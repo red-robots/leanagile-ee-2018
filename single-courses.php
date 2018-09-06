@@ -85,6 +85,8 @@ if($enddate != '') {
            <a class="button" href="<?php the_field('event_picker'); ?>">REGISTER NOW</a>
         </div>
         <?php } ?>
+
+        
     
 </div>
 

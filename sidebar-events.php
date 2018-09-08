@@ -70,7 +70,7 @@ if ( espresso_venue_has_address( $post->ID )) :
         <a href="<?php bloginfo('url'); ?>/map/?map=<?php echo $location; ?>" target="_blank">Map it &raquo;</a>
       </div>
 
-      <?php //espresso_venue_gmap($post->ID); ?>
+      <?php espresso_venue_gmap($post->ID); ?>
     <?php //} ?>
   </div>
 <?php endif; ?>

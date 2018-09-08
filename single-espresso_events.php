@@ -10,7 +10,10 @@
 get_header(); ?>
 
 <div class="page-content">
-
+<div class="entry-content">  
+           <h1><?php the_title(); ?></h1>
+           </div>
+<?php get_template_part('inc/steps'); ?>
 
 
 <div class="page-left">
@@ -18,7 +21,6 @@ get_header(); ?>
             
           <div class="post-container">
           <div class="entry-content">  
-           <h1><?php the_title(); ?></h1>
             <div class="post-date">
             <?php 
 

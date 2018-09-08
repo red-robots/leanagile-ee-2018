@@ -914,3 +914,20 @@ function yoasttobottom() {
   return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+
+add_filter( 'AHEE__SPCO__load_reg_steps__reg_steps_to_load', 'ee_add_extra_reg_step' );
+function ee_add_extra_reg_step($reg_steps)
+{
+    require_once ( plugin_dir_path( __FILE__ ) . 'EE_SPCO_Reg_Step_Add_Extra_Step.class.php' );
+    array_unshift(
+        $reg_steps,
+        array(
+            'file_path'  => plugin_dir_path( __FILE__ ),
+            'class_name' => 'EE_SPCO_Reg_Step_Add_Extra_Step',
+            'slug'       => 'select_tickets',
+            'has_hooks'  => false,
+        )
+    );
+    return $reg_steps;
+}

@@ -1629,6 +1629,7 @@ h2.rounded{margin-top:20px;margin-bottom:10px;color:#047fc5;font-size:16px;text-
 }.spco-whats-next-buttons{clear:both;padding:2em 0 1em;margin:0;text-align:right}
 .spco-whats-next-buttons .event-queue-register-btn,.spco-whats-next-buttons .spco-register-btn{margin-left:1em !important}
 .act-like-link{cursor:pointer}
+.top-page-message{width:100%;padding:8px;background-color:#f7f48d}
 .spco-attendee-panel-dv{width:100% !important}
 .ee-reg-form-attendee-dv{padding:1em 2.5%;margin:1em 0 2em;border:2px solid #eee;border-radius:2px}
 .ee-reg-form-attendee-dv .ee-reg-qstn-input-dv{display:block;clear:both;margin:0 0 .5em}

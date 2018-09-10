@@ -20,7 +20,7 @@ get_header(); ?>
 				
                 
               <div class="page-content">
-            	
+            	<?php if(is_page('registration checkout')){ get_template_part('inc/top-page-message');} ?>
 				
 				<?php //get_template_part('search-page-form'); ?>
                

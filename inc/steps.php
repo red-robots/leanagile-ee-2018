@@ -7,7 +7,7 @@
                 <h4 id="spco-step-select_tickets-display-hdr" class="spco-steps-display-hdr">
                     <span class="spco-step-big-nmbr">1</span>&nbsp;<span
                         class="spco-step-name">
-                        Register</span>
+                        Course Selection</span>
                 </h4>
             </div>
 

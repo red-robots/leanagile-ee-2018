@@ -9,7 +9,7 @@ class EE_SPCO_Reg_Step_Add_Extra_Step extends EE_SPCO_Reg_Step
     public function __construct(EE_Checkout $checkout)
     {
         $this->_slug = 'select_tickets';
-        $this->_name = 'Register';
+        $this->_name = 'Course Selection';
         $this->_template = '';
         $this->checkout = $checkout;
         $this->_reset_success_message();

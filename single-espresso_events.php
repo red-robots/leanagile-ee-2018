@@ -86,14 +86,7 @@ if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_arch
 
        
             
-           <div class="single-meta">
-           
-           <div class="category-list">Posted in: <?php the_category(', '); ?></div>
-           	<div class="clear"></div>
-           <div class="tag-list">Tagged: <?php the_tags(); ?></div>
-           
-           
-           </div><!-- signlemeta --> 
+        
          
             
             

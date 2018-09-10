@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="page-content">
-
+<?php get_template_part('inc/top-page-message'); ?>
 <div class="page-right">
 <?php 
 
@@ -18,6 +18,7 @@ get_header(); ?>
 $startdate = DateTime::createFromFormat('Ymd', get_field('start_date'));
 $enddate = DateTime::createFromFormat('Ymd', get_field('end_date'));
 $enddd = get_field('end_date');
+$textAboveButn = get_field('text_above_button');
 $startMonthLetter = $startdate->format('M');
 // set month if you have an enddate.
 if($enddate != '') {
@@ -77,8 +78,9 @@ if($enddate != '') {
                 <?php } ?>
                 
               </div><!-- hotel link -->
-            
-      
+            <?php if($textAboveButn) { ?>
+      <div class="text-above-btn"><?php echo $textAboveButn; ?></div>
+      <?php } ?>
     
        	<?php if(get_field('event_picker')!="") { ?>
         <div class="register">

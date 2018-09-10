@@ -10,6 +10,7 @@
 get_header(); ?>
 
 <div class="page-content">
+<?php get_template_part('inc/top-page-message'); ?>
 <div class="entry-content">  
            <h1><?php the_title(); ?></h1>
            </div>

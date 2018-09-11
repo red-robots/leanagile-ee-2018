@@ -35,9 +35,9 @@
 <div class="venue-content">
 
   
-  <h3 class="event-venues-h3 ee-event-h3">
+ <!--  <h3 class="event-venues-h3 ee-event-h3">
     <?php _e( 'Details', 'event_espresso' ); ?>
-  </h3>
+  </h3> -->
 
   <?php if ( $venue_phone = espresso_venue_phone( $post->ID, FALSE )) : ?>
   <p>
@@ -45,9 +45,9 @@
   </p>
   <?php endif; ?>
   <?php if ( $venue_website = espresso_venue_website( $post->ID, FALSE )) : ?>
-  <p>
+ <!--  <p>
     <span class="small-text"><strong><?php _e( 'Venue Website:', 'event_espresso' ); ?> </strong></span><?php echo $venue_website; ?>
-  </p>
+  </p> -->
   <?php endif; ?>
 
 </div>
@@ -57,7 +57,7 @@
 <?php  global $post; 
 if ( espresso_venue_has_address( $post->ID )) :
 ?>
-  <div class="additional-courses">
+  <!-- <div class="additional-courses">
     <strong>Course Location: </strong>
     <br>
     <?php _e( 'Address:', 'event_espresso' ); ?></strong></span><?php espresso_venue_address( 'inline', $post->ID ); ?>
@@ -66,13 +66,13 @@ if ( espresso_venue_has_address( $post->ID )) :
     //$location = espresso_venue_address( 'inline', $post->ID );
     $location = espresso_venue_id();
     ?>
-      <!-- <div class="mapit">
+      <div class="mapit">
         <a href="<?php bloginfo('url'); ?>/map/?map=<?php echo $location; ?>" target="_blank">Map it &raquo;</a>
-      </div> -->
+      </div> 
 
       <?php //espresso_venue_gmap($post->ID); ?>
     <?php //} ?>
-  </div>
+  </div> -->
 <?php endif; ?>
 
 

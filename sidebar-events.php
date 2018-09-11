@@ -66,11 +66,11 @@ if ( espresso_venue_has_address( $post->ID )) :
     //$location = espresso_venue_address( 'inline', $post->ID );
     $location = espresso_venue_id();
     ?>
-      <div class="mapit">
+      <!-- <div class="mapit">
         <a href="<?php bloginfo('url'); ?>/map/?map=<?php echo $location; ?>" target="_blank">Map it &raquo;</a>
-      </div>
+      </div> -->
 
-      <?php espresso_venue_gmap($post->ID); ?>
+      <?php //espresso_venue_gmap($post->ID); ?>
     <?php //} ?>
   </div>
 <?php endif; ?>

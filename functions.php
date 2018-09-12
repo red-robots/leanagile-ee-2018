@@ -916,10 +916,22 @@ function yoasttobottom() {
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
 
+add_action(
+    'AHEE__EE_System__load_espresso_addons__complete',
+    'my_add_extra_step_class_autoloader'
+);
+function my_add_extra_step_class_autoloader() {
+     EEH_Autoloader::instance()->register_autoloader(
+        array(
+            'EE_SPCO_Reg_Step_Add_Extra_Step' => 
+            plugin_dir_path( __FILE__ ) . 'EE_SPCO_Reg_Step_Add_Extra_Step.class.php'
+        )
+    );
+}
+
 add_filter( 'AHEE__SPCO__load_reg_steps__reg_steps_to_load', 'ee_add_extra_reg_step' );
 function ee_add_extra_reg_step($reg_steps)
 {
-    require_once ( plugin_dir_path( __FILE__ ) . 'EE_SPCO_Reg_Step_Add_Extra_Step.class.php' );
     array_unshift(
         $reg_steps,
         array(

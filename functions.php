@@ -907,6 +907,32 @@ function wpse45436_posts_filter( $query ){
         $query->query_vars['meta_value'] = $_GET['ADMIN_FILTER_FIELD_VALUE'];
     }
 }
+
+// Change text
+function mycustom_filter_gettext( $translated, $original, $domain ) {
+ 
+    // This is an array of original strings
+    // and what they should be replaced with
+    $strings = array(
+        "        This option allows you to use the above information for all additional attendee question fields. " => "Or Use Attendee #1's Information for ALL attendees",
+        // Add some more strings here
+    );
+ 
+    // See if the current string is in the $strings array
+    // If so, replace its translation
+    if ( isset( $strings[$original] ) ) {
+        // This accomplishes the same thing as __()
+        // but without running it through the filter again
+        $translations = get_translations_for_domain( $domain );
+        $translated = $translations->translate( $strings[$original] );
+    }
+ 
+    return $translated;
+}
+ 
+add_filter( 'gettext', 'mycustom_filter_gettext', 10, 3 );
+
+
  /*-------------------------------------
   Move Yoast to the Bottom
 ---------------------------------------*/

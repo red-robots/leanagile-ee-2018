@@ -7,6 +7,9 @@
 
 jQuery(document).ready(function ($) {
 	
+	
+
+
 	/*
 	*
 	*	Choose Credit card by default on registration checkout page.

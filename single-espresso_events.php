@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="entry-content">  
            <h1><?php the_title(); ?></h1>
            </div>
-<?php get_template_part('inc/steps'); ?>
+<?php //get_template_part('inc/steps'); ?>
 
 
 <div class="page-left">
@@ -85,8 +85,7 @@ if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_arch
 <!-- .event-content -->
 
 
-       
-            
+
         
          
             
@@ -100,6 +99,11 @@ if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_arch
 
 <?php get_sidebar('events');  ?>
 
+<div class="top-page-message">
+After you hit the Continue button, there are two small steps to complete the registration.
+<br>
+<strong>Note: </strong>If you wish to purchase tickets for 6+ people, please contact us.
+</div>
 
 </div><!-- #content -->
 

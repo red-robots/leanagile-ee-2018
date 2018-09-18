@@ -81,8 +81,20 @@ if($enddate != '') {
             <?php if($textAboveButn) { ?>
       <div class="text-above-btn"><?php echo $textAboveButn; ?></div>
       <?php } ?>
+
+      <?php 
+      // old paypal link
+
+      if(get_field('register')!="") { ?>
+        <div class="register">
+           <?php the_field('register'); ?>
+        </div>
+       <?php } ?>
     
-       	<?php if(get_field('event_picker')!="") { ?>
+       	<?php 
+        // new event espresso linker
+
+        if(get_field('event_picker')!="") { ?>
         <div class="register">
            <a class="button" href="<?php the_field('event_picker'); ?>">REGISTER NOW</a>
         </div>

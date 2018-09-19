@@ -79,17 +79,22 @@ if($enddate != '') {
                 
               </div><!-- hotel link -->
             <?php if($textAboveButn) { ?>
-      <div class="text-above-btn"><?php echo $textAboveButn; ?></div>
+      <div class="text-above-btn entry-content"><?php echo $textAboveButn; ?></div>
       <?php } ?>
 
       <?php 
       // old paypal link
 
       if(get_field('register')!="") { 
-
+// echo 'yer';
           $show=get_field('show_paypal');
-            if($show=='Yes') {
+          echo '<pre>';
+          print_r($show);
+          echo '</pre>';
+            if($show[0]=='No'||$show[1]=='No') {
             ?>
+            
+            <?php } else { ?>
             <div class="register">
                <?php the_field('register'); ?>
             </div>

@@ -942,6 +942,14 @@ function yoasttobottom() {
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
 
+//* Add a label for the promotion code field
+add_filter( 'FHEE__EED_Promotions___add_promotions_form_inputs__ee_promotion_code_input__html_label_text', 'ee_registration_checkout_promotions_heading' );
+function ee_registration_checkout_promotions_heading() {
+
+ return 'If registering 3 or more attendees please use the group discount: GROUP.';
+}
+
+
 // add_filter( 'AHEE__SPCO__load_reg_steps__reg_steps_to_load', 'ee_add_extra_reg_step' );
 // function ee_add_extra_reg_step($reg_steps)
 // {

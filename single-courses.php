@@ -85,10 +85,15 @@ if($enddate != '') {
       <?php 
       // old paypal link
 
-      if(get_field('register')!="") { ?>
-        <div class="register">
-           <?php the_field('register'); ?>
-        </div>
+      if(get_field('register')!="") { 
+
+          $show=get_field('show_paypal');
+            if($show=='Yes') {
+            ?>
+            <div class="register">
+               <?php the_field('register'); ?>
+            </div>
+            <?php } ?>
        <?php } ?>
     
        	<?php 

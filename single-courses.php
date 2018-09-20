@@ -88,9 +88,9 @@ if($enddate != '') {
       if(get_field('register')!="") { 
 // echo 'yer';
           $show=get_field('show_paypal');
-          echo '<pre>';
-          print_r($show);
-          echo '</pre>';
+          // echo '<pre>';
+          // print_r($show);
+          // echo '</pre>';
             if($show[0]=='No'||$show[1]=='No') {
             ?>
             

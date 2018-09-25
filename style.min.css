@@ -1697,6 +1697,7 @@ h2.rounded{margin-top:20px;margin-bottom:10px;color:#047fc5;font-size:16px;text-
 #ee-single-page-checkout-dv .big-lbl{min-width:100%}
 }.ee-privacy-consent-assertion{text-align:center;max-width:600px;min-width:200px;margin-left:auto;margin-right:auto}
 #ee-single-page-checkout-dv label{margin:40px 0 0 0 !important}
+.ee-registration-details-dv a[href*="attendee_information"]{display:none}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}

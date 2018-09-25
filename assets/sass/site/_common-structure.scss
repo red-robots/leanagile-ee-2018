@@ -1542,3 +1542,6 @@ background-color: rgba(255,255,255,.3);
 #ee-single-page-checkout-dv label {
 	margin: 40px 0 0 0 !important;
 }
+.ee-registration-details-dv a[href*="attendee_information"] {
+	display: none;
+}

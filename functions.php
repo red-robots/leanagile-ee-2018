@@ -966,7 +966,7 @@ function ee_display_download_tickets( $transaction ) {
 			// $ticket_url = add_query_arg($query_args, get_site_url());
 			$ticket_url = get_bloginfo('url').'/lean-agile-and-scrum-courses/';
 
-			echo '<div class="register"><a class="button" href="' . $ticket_url .'">Download your tickets!</a></div>';
+			echo '<div class="register"><a class="button" href="' . $ticket_url .'">Upcoming Courses</a></div>';
 
 		}
 

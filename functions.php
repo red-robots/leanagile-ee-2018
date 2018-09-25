@@ -949,6 +949,32 @@ function ee_registration_checkout_promotions_heading() {
  return 'If registering 3 or more attendees please use the group discount: GROUP.';
 }
 
+function ee_display_download_tickets( $transaction ) {
+
+	if ( $transaction instanceof EE_Transaction ) {
+
+		$primary_reg = $transaction->primary_registration();
+
+		if ( $primary_reg->is_approved() ) {
+
+			$reg_url_link = $primary_reg->reg_url_link();
+
+			$query_args = array(
+				'ee' => 'ee-txn-tickets-approved-url',
+				'token' => $reg_url_link
+			);
+			// $ticket_url = add_query_arg($query_args, get_site_url());
+			$ticket_url = get_bloginfo('url').'/lean-agile-and-scrum-courses/';
+
+			echo '<div class="register"><a class="button" href="' . $ticket_url .'">Download your tickets!</a></div>';
+
+		}
+
+	}
+
+}
+add_action( 'AHEE__thank_you_page_overview_template__content', 'ee_display_download_tickets');
+
 
 // add_filter( 'AHEE__SPCO__load_reg_steps__reg_steps_to_load', 'ee_add_extra_reg_step' );
 // function ee_add_extra_reg_step($reg_steps)

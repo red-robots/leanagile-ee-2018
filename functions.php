@@ -975,6 +975,19 @@ function ee_display_download_tickets( $transaction ) {
 }
 add_action( 'AHEE__thank_you_page_overview_template__content', 'ee_display_download_tickets');
 
+function pe_mycustom_filter_gettext( $translated, $original, $domain ) {
+    $strings = array(
+        'First Name' => 'Payor First Name',
+        'Last Name' => 'Payor Last Name',
+    );
+    if ( isset( $strings[$original] ) ) {
+        $translations = get_translations_for_domain( $domain );
+        $translated = $translations->translate( $strings[$original] );
+    }
+    return $translated;
+}
+add_filter( 'gettext', 'pe_mycustom_filter_gettext', 10, 3 );
+
 // Rearagne the countries in the Dropdown
 // add_action('wp_enqueue_scripts', 'my_rearrange_ee_country_options', 20);
 // function my_rearrange_ee_country_options() { 

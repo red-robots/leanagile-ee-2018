@@ -16,7 +16,11 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('#ee-available-payment-method-inputs-paypal_pro').attr('checked',true);
-	
+
+
+	//$('#paypal-pro-billing-form-country>option:contains(Canada)').insertAfter('#paypal-pro-billing-form-country>option[value=1]');
+	$('#paypal-pro-billing-form-country>option[value=CA]').insertBefore('#paypal-pro-billing-form-country>option[value=AR]');
+	$('#paypal-pro-billing-form-country>option[value=US]').insertBefore('#paypal-pro-billing-form-country>option[value=CA]');
 	/*
 	*
 	*	Current Page Active

@@ -976,16 +976,18 @@ function ee_display_download_tickets( $transaction ) {
 add_action( 'AHEE__thank_you_page_overview_template__content', 'ee_display_download_tickets');
 
 // Rearagne the countries in the Dropdown
-add_action('wp_enqueue_scripts', 'my_rearrange_ee_country_options', 20);
-function my_rearrange_ee_country_options() { 
-    $custom_js = 'jQuery(document).ready(function($){';
-    $custom_js .= 'var options = $(".ee-reg-qstn-country option");'; 
-    $custom_js .= '$( options[ 3 ] ).insertAfter( $(options[ 0 ] ) );';
-    $custom_js .= '$( options[ 8 ] ).insertAfter( $(options[ 1 ] ) );';
-    // add more options to arrange here if desired
-    $custom_js .= '});';
-    wp_add_inline_script('ee_form_section_validation', $custom_js);
-}
+// add_action('wp_enqueue_scripts', 'my_rearrange_ee_country_options', 20);
+// function my_rearrange_ee_country_options() { 
+//     $custom_js = 'jQuery(document).ready(function($){';
+//     $custom_js .= 'var options = $(".ee-billing-qstn-country select");'; 
+//     $custom_js .= '$( options[ 6 ] ).insertAfter( $(options[ 0 ] ) );';
+//     $custom_js .= '$( options[ 8 ] ).insertAfter( $(options[ 1 ] ) );';
+//     // add more options to arrange here if desired
+//     $custom_js .= '});';
+//     wp_add_inline_script('ee_form_section_validation', $custom_js);
+// }
+
+
 
 
 // add_filter( 'AHEE__SPCO__load_reg_steps__reg_steps_to_load', 'ee_add_extra_reg_step' );

@@ -28,6 +28,14 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+(function($) {
+    $(function(){
+         // $('#paypal-pro-billing-form-country>option[value=CA]').insertBefore('#paypal-pro-billing-form-country>option[value=AR]');
+          $('#paypal-pro-billing-form-country>option[value=US]').insertBefore('#paypal-pro-billing-form-country>option[value=CA]');
+    });
+}(jQuery));
+
+
 </script>
 <!-- liquid web -->
 </body>

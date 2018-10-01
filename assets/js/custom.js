@@ -19,8 +19,8 @@ jQuery(document).ready(function ($) {
 
 
 	//$('#paypal-pro-billing-form-country>option:contains(Canada)').insertAfter('#paypal-pro-billing-form-country>option[value=1]');
-	$('#paypal-pro-billing-form-country>option[value=CA]').insertBefore('#paypal-pro-billing-form-country>option[value=AR]');
-	$('#paypal-pro-billing-form-country>option[value=US]').insertBefore('#paypal-pro-billing-form-country>option[value=CA]');
+	// $('#paypal-pro-billing-form-country>option[value=CA]').insertBefore('#paypal-pro-billing-form-country>option[value=AR]');
+	// $('#paypal-pro-billing-form-country>option[value=US]').insertBefore('#paypal-pro-billing-form-country>option[value=CA]');
 	/*
 	*
 	*	Current Page Active
@@ -110,4 +110,8 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	// new WOW().init();
 
+
+
+
 });// END #####################################    END
+

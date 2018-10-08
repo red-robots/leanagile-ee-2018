@@ -7,9 +7,9 @@
 	</div><!-- #main .wrapper -->
 	<div id="footer">
 		<div class="site-info">
-            <p>&copy; <?php echo date("Y") ?> LeanAgileTraining (part of Kitty Hawk Consulting, Inc.) | <a href='mailt&#111;&#58;inf&#111;&#64;l&#101;anag&#105;le%7&#52;raini&#110;&#103;&#46;%&#54;3o&#37;&#54;D'>inf&#111;&#64;&#108;eana&#103;&#105;&#108;etra&#105;n&#105;ng&#46;com</a> | <!-- 704.376.8881 -->(800) 209-1280<br>
+            <p>&copy; <?php echo date("Y"); ?> LeanAgileTraining (part of Kitty Hawk Consulting, Inc.) | <a href='mailt&#111;&#58;inf&#111;&#64;l&#101;anag&#105;le%7&#52;raini&#110;&#103;&#46;%&#54;3o&#37;&#54;D'>inf&#111;&#64;&#108;eana&#103;&#105;&#108;etra&#105;n&#105;ng&#46;com</a> | <!-- 704.376.8881 -->(800) 209-1280<br>
               <br>
-            <a href="<?php bloginfo ('url');?>/sitemap/">sitemap</a>  | site by <a href="http://bellaworksweb.com/" target="_blank">Bellaworks</a></p>
+            <a href="<?php bloginfo ('url');?>/sitemap/">sitemap</a>  | site by <a href="https://bellaworksweb.com/" target="_blank">Bellaworks</a></p>
            
 		</div><!-- .site-info -->
 	</div><!-- #footer -->

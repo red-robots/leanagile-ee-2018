@@ -21,20 +21,22 @@ get_header(); ?>
            <h1><?php the_title(); ?></h1>
             <div class="post-date">
             <?php 
-
-            if( is_singular() == 'events' ) {
+            //the_date();
+            if( get_post_type() == 'events' ) {
               // echo 'yes';
               $date_format = 'M d, Y';
               $time_format = 'h a';
               $EVT_ID = FALSE;
-             echo EEH_Event_View::the_event_date( $date_format, $time_format, $EVT_ID );
-      // return '';
+              echo EEH_Event_View::the_event_date( $date_format, $time_format, $EVT_ID );
+              // return '';
+            } elseif( get_post_type() == 'post' ) {
+              the_date();
             } else {
               the_time('F j, Y');
             }
              ?>
             </div> 
-			<?php the_content(); ?>
+			   <?php the_content(); ?>
             
          <p><?php previous_post('&laquo; &laquo; %', '', 'yes'); ?>  ||  <?php next_post('% &raquo; &raquo; ', '', 'yes'); ?></p>
             

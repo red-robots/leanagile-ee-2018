@@ -946,9 +946,11 @@ add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 add_filter( 'FHEE__EED_Promotions___add_promotions_form_inputs__ee_promotion_code_input__html_label_text', 'ee_registration_checkout_promotions_heading' );
 function ee_registration_checkout_promotions_heading() {
 
- return 'Consider following promo codes, if you qualify: AGILEGROUP, PMIGROUP, OTHERGROUP, or GROUP3+. If you do not qualify we will get back to you. <br><br>
+ return 'Consider following promo codes, if you qualify: AGILEGROUP, PMICHAPTER, OTHERGROUP, or GROUP3+. If you do not qualify we will get back to you. <br><br>
 
-You may also have received a special promo code. Use only one.';
+You may also have received a special promo code. <br><br>
+
+Use only one.';
 }
 
 function ee_display_download_tickets( $transaction ) {

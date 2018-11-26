@@ -59,10 +59,16 @@ if( isset( $emailUrl )) {
 
 <div class="mc-field-group input-group">
     <strong>LAT </strong>
-    <ul><li><input type="checkbox" value="1" name="group[27201][1]" id="mce-group[27201]-27201-0"><label for="mce-group[27201]-27201-0">LAT Newsletter</label></li>
+    <ul>
+    <li><input type="checkbox" value="1" name="group[27201][1]" id="mce-group[27201]-27201-0"><label for="mce-group[27201]-27201-0">LAT Newsletter</label></li>
 <li><input type="checkbox" value="2" name="group[27201][2]" id="mce-group[27201]-27201-1"><label for="mce-group[27201]-27201-1">NC-SC course updates</label></li>
 <li><input type="checkbox" value="4" name="group[27201][4]" id="mce-group[27201]-27201-2"><label for="mce-group[27201]-27201-2">Canada course updates</label></li>
 <li><input type="checkbox" value="8" name="group[27201][8]" id="mce-group[27201]-27201-3"><label for="mce-group[27201]-27201-3">NYC course updates</label></li>
+<li><input type="checkbox" value="16" name="group[27201][16]" id="mce-group[27201]-27201-4"><label for="mce-group[27201]-27201-4">Tennessee course updates</label></li>
+    <!-- <li><input type="checkbox" value="1" name="group[27201][1]" id="mce-group[27201]-27201-0"><label for="mce-group[27201]-27201-0">LAT Newsletter</label></li>
+<li><input type="checkbox" value="2" name="group[27201][2]" id="mce-group[27201]-27201-1"><label for="mce-group[27201]-27201-1">NC-SC course updates</label></li>
+<li><input type="checkbox" value="4" name="group[27201][4]" id="mce-group[27201]-27201-2"><label for="mce-group[27201]-27201-2">Canada course updates</label></li>
+<li><input type="checkbox" value="8" name="group[27201][8]" id="mce-group[27201]-27201-3"><label for="mce-group[27201]-27201-3">NYC course updates</label></li> -->
 </ul>
 </div>
 <div class="mc-field-group input-group">

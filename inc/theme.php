@@ -746,3 +746,44 @@ function yoasttobottom() {
   return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+/* 
+
+
+    No index for expired events.
+
+
+*/
+
+function ee_add_tagseo_meta() {
+  if ('espresso_events' == get_post_type() && is_single() ){
+    $id = get_the_id();
+    $event = EEH_Event_View::get_event( $id );
+    $status = $event instanceof EE_Event ? $event->get_active_status() : '';
+    if ( $status == 'DTE' ) {
+?>
+<meta name="robots" content="noindex">
+<?php
+    }
+  }
+}
+add_action( 'wp_head', 'ee_add_tagseo_meta', 9 );
+/* 
+
+
+    No index for expired events Yoast XML.
+
+
+*/
+function ee_seo_xml_sitemap_no_expired_events( $url, $type, $post ) {
+  if ('espresso_events' == get_post_type( $post ) ){
+    $id = $post->ID;
+    $event = EEH_Event_View::get_event( $id );
+    $status = $event instanceof EE_Event ? $event->get_active_status() : '';
+    if ( $status == 'DTE' ) {
+      $url = '';
+    }
+  }
+  return $url;
+}
+add_filter( 'wpseo_sitemap_entry', 'ee_seo_xml_sitemap_no_expired_events', 10, 3 );

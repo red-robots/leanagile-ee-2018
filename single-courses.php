@@ -81,7 +81,7 @@ if($enddate != '') {
                  if($hLink != '') {
                  ?>
                    <div class="hotel-link">
-                    <a href="<?php  ?>" target="_blank"></a>
+                    <a href="<?php echo $hLink; ?>" target="_blank"></a>
                   </div>
                 <?php } ?>
                 

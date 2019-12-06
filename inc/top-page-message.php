@@ -1,3 +1,8 @@
+<?php
+    $notification_header = get_field('event_nofication_header');
+    if($notification_header):
+?>
 <div class="top-page-message">
-	Have questions? Need assistance? Please contact us at <a href="mailto:info@leanagiletraining.com">info@leanagiletraining.com</a>
+	<?php echo $notification_header; ?>
 </div>
+<?php endif; ?>

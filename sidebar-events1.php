@@ -1,9 +1,24 @@
 <div class="page-right">
-<?php if ( is_active_sidebar( 'event-sidebar' ) ) : ?>
+<?php if ( is_active_sidebar( 'event_sidebar' ) ) : ?>
 		
-       <div id="secondary" class="widget-area" role="complementary">        
+       <div id="secondary" class="widget-area" role="complementary">
 
-			<?php //dynamic_sidebar( 'event-sidebar' ); ?>
+        <!-- <div class="widget">
+          <form role="search" id="searchform" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
+              <label>
+                  <span class="screen-reader-text"><?php echo _x( 'Search Blog:', 'label' ) ?></span>
+                  <input type="search" class="search-field"
+                      placeholder="<?php echo esc_attr_x( 'Search the Blog', 'placeholder' ) ?>"
+                      value="<?php echo get_search_query() ?>" name="s"
+                      title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+              </label>
+              <input type="hidden" name="post_type" value="post" />
+              <input type="submit" class="search-submit"
+                  value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+          </form>
+        </div> -->
+
+			<?php //dynamic_sidebar( 'event_sidebar' ); ?>
 		</div><!-- #secondary -->
         
 	<?php endif; // if sidebar 1 is active ?>
@@ -19,26 +34,6 @@
 ?>
 <div class="venue-content">
 
-  <?php 
-    $sidebar_title    = get_field('sidebar_title');
-    $sidebar_content  = get_field('sidebar_content');
-    $sidebar_footer   = get_field('sidebar_footer');
-   ?>
-  <?php if( $sidebar_title || $sidebar_content || $sidebar_footer): ?>
-  <div class="custom_right_side" style="background-color:#ededed;padding:5px 5px 10px 10px;border-left:10px solid #047fc5;margin:10px 0">
-    <h4><?php echo ($sidebar_title) ? $sidebar_title : '';  ?></h4>
-    <div>
-      <div>
-        <?php echo ($sidebar_content) ? $sidebar_content : '';  ?>
-      </div>
-      <div>
-        <small><?php echo ($sidebar_footer) ? $sidebar_footer : ''; ?></small>
-      </div>
-      
-      
-    </div>
-  </div>
-  <?php endif; ?>
   
  <!--  <h3 class="event-venues-h3 ee-event-h3">
     <?php _e( 'Details', 'event_espresso' ); ?>

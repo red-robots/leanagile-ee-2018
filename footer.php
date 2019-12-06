@@ -34,6 +34,17 @@ jQuery( document ).ajaxComplete( function() {
 });
 
 
+jQuery(document).ready(function($){
+  var checks = $('.checkbox-dropdown-selector ul li');
+    $.each(checks, function(){
+        var labelBox = $(this).find('.datetime-selector-option');
+        labelBox.prop('checked', false);        
+    });
+
+    $('.checkbox-dropdown-selector').css('display', 'block');
+});
+
+
 </script>
 <!-- liquid web -->
 </body>

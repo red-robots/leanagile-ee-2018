@@ -1056,3 +1056,63 @@ add_filter( 'gettext', 'pe_mycustom_filter_gettext', 10, 3 );
 //     );
 //     return $reg_steps;
 // }
+
+function my_print_tickets_left_after_selector($atts) {
+global $wpdb;
+//Set $EVT_ID to the id set within the shortcode
+$EVT_ID = $atts['evt_id'];
+ $x = '';
+    //Setup $x to start UL.
+    $x .= '<ul style="margin-left:0;">';
+        
+        //SQL Query to pull in DTT_name, DTT_reg_limit and DTT_sold values for the event id give.
+        $sql = "SELECT DTT_name, DTT_reg_limit, DTT_sold ";
+        $sql .= "FROM {$wpdb->prefix}esp_datetime ";
+        $sql .= "WHERE {$wpdb->prefix}esp_datetime.EVT_ID = %d";
+        
+        //Run the query to pull the above details.
+        $datetimes = $wpdb->get_results( $wpdb->prepare( $sql, $EVT_ID ));
+        
+        //Loop over $datetimes, for each element use $datetime within the loop.
+        foreach($datetimes as $datetime){
+            //If DTT_Name is set, use that value, if not use 'this event'.
+            $name = !empty($datetime->DTT_name) ? ($datetime->DTT_name) : 'this event';
+            
+            //Set $limit to the DTT_reg_limit value.
+            $limit = $datetime->DTT_reg_limit;
+            
+            //Set $sold to the DTT_sold value.
+            $sold = $datetime->DTT_sold;
+            //Remainder places = $limit - $sold
+            //So this is remaining spaces on the Datetime.
+            $remainderp = $limit - $sold;
+            //Set $remain to with 'bucketloads of' or the value within $remainderp depending if the $limit value it -1.
+            //In otherwords, if there is no limit set on the datetime, set $remain to be 'bucketloads of', otherwise $remain should be the remaining spaces.
+            $remain = $limit == -1 ? 'bucketloads of' : $remainderp;
+            
+            //Is $limit equals $sold then the datetime has no remaining spaces, its sold out.
+            //So if that's the case we don't want to output anyting to do with remaining spaces, just say its sold out...
+            if ( $limit == $sold ) : 
+                $x .= $name . ' is <b>sold out</b>';
+            //If its NOT sold out, output the detais below:
+            else :
+                //_nx($single, $plural, $number, $context, $domain)
+                //$single is the output when $number == 1.
+                //$plural is the output when $number > 1.
+                //$number (in this case spaces remaining).
+                //$context, used for translation and allows you to set when the translate.
+                //$domain, used in translation to say which text domain to use for the translation.
+                $x .= sprintf( _nx(
+                    '%1$sThere is one space left for %3$s</li>', 
+                    '%1$sThere are %2$s spaces left for %3$s</li>', 
+                    $remain, 'event ticket info', 'event_espresso' ),
+                    '<li style="list-style-type:none;">', $remain, '<span>' . $name . '</span>'
+                    );
+            endif;
+        }
+    //Close the UL.
+    $x .= '</ul>';
+    //Return he output to the page.
+    return $x;
+}
+add_shortcode('show_capacity','my_print_tickets_left_after_selector');

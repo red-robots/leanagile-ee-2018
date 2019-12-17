@@ -160,7 +160,11 @@ function espresso_filter_spco_submit_button_text( $submit_button_text, EE_Checko
 }
 add_filter( 'FHEE__EE_SPCO_Reg_Step__set_submit_button_text___submit_button_text', 'espresso_filter_spco_submit_button_text', 10, 2 );
 
+
+
 /*
+
+
 
 	Custom client login, link and title.
 
@@ -1116,3 +1120,23 @@ $EVT_ID = $atts['evt_id'];
     return $x;
 }
 add_shortcode('show_capacity','my_print_tickets_left_after_selector');
+
+
+
+function event_change_checkbox_info(){
+    //global $event_checkbox_text_notification;
+    $text = '';
+    $event_checkbox_text = get_field('event_checkbox_dropdown_text');
+    if( $event_checkbox_text ){     
+        $event_checkbox_text_notification = trim(strip_tags($event_checkbox_text));
+        $text = $event_checkbox_text_notification;
+    }
+    return  $text;
+}
+
+//add_action( 'after_theme_setup', 'event_change_checkbox_info' );
+
+//add_action( 'init', 'event_change_checkbox_info' );
+
+//apply_filters('FHEE__EE_Checkbox_Dropdown_Selector_Display_Strategy__display__html',
+                 //  'event_change_checkbox_info', 1);

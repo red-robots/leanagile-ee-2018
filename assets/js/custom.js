@@ -7,10 +7,14 @@
 
 jQuery(document).ready(function ($) {
 	
-     if($('body').hasClass('postid-8836')){       
-        page_right = $('.page-right .venue-content');        
+     //if($('body').hasClass('postid-8836')){       
+        //page_right = $('.page-right .venue-content');        
         //page_right.html('<div class="custom_right_side" style="background-color:#ededed;padding:5px 5px 10px 10px;border-left:10px solid #047fc5;margin:10px 0"><h4>Please choose 3 days or 2 days.</h4><div><p>The 3 days includes the Agile Release Planning workshop. People who have attended it feel this day is essential.</p><p>The learning regarding planning and many specific skill sets is very useful in doing agile-scrum well.</p><p>Scrum Alliance does not require you to take a third day, so you can choose 2 days if your main concern is certification.</p><small>It is also possible to take the 3rd day at another time.<br>(The price is $50 less if you buy it today.)</small></div></div>');
-     }   	
+     //}  
+
+
+
+     //$('.date-time-filter-notice-pg').html(event_checkbox_text); 	
 
 
 	/*

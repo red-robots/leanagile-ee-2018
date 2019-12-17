@@ -33,8 +33,19 @@ jQuery( document ).ajaxComplete( function() {
           $('#paypal-pro-billing-form-country>option[value=US]').insertBefore('#paypal-pro-billing-form-country>option[value=CA]');
 });
 
+<?php 
+ 
+//global $event_checkbox_text_notification;
+$event_checkbox_text = event_change_checkbox_info();  ?>
 
 jQuery(document).ready(function($){
+  
+    var id = "datetime-selector-" + <?php echo get_the_ID(); ?> + "-date-time-filter-notice-pg";
+    var checkbox_value = "<?php echo esc_html__(strip_tags($event_checkbox_text)); ?>";
+    $('#' + id).html(checkbox_value);
+
+
+
   var checks = $('.checkbox-dropdown-selector ul li');
     $.each(checks, function(){
         var labelBox = $(this).find('.datetime-selector-option');
@@ -42,6 +53,9 @@ jQuery(document).ready(function($){
     });
 
     $('.checkbox-dropdown-selector').css('display', 'block');
+
+    
+    
 });
 
 

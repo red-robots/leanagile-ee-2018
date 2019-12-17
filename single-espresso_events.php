@@ -7,7 +7,13 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header(); 
+
+$event_checkbox_text = get_field('event_checkbox_dropdown_text');
+$event_footer_notification = get_field('event_notification_footer');
+
+
+?>
 
 <div class="page-content">
 <?php get_template_part('inc/top-page-message'); ?>
@@ -80,6 +86,13 @@ if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_arch
 		);
 		do_action( 'AHEE_event_details_after_the_content', $post );
 	}
+
+    /*if( $event_checkbox_text ){
+        apply_filters(
+                    'FHEE__EE_Checkbox_Dropdown_Selector_Display_Strategy__display__html',
+                    ($event_checkbox_text)
+        );
+    }*/
  ?>
 </div>
 <!-- .event-content -->
@@ -99,11 +112,11 @@ if ( espresso_display_ticket_selector( $post->ID ) && ( is_single() || ( is_arch
 
 <?php get_sidebar('events');  ?>
 
-<div class="top-page-message">
-After you hit the Continue button, there are two small steps to complete the registration.
-<br>
-<strong>Note: </strong>If you wish to purchase tickets for 6+ people, please contact us.
-</div>
+<?php if( $event_footer_notification ): ?>
+    <div class="top-page-message">
+        <?php echo $event_footer_notification; ?>
+    </div>
+<?php endif; ?>
 
 </div><!-- #content -->
 

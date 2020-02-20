@@ -288,3 +288,53 @@ body.single-espresso_events .post-date {
 .spco-payment-info-dv .line-item-desc-spn  {
     display: none;
 }
+
+#courses{
+	thead{
+		tr{
+			th{
+				color: #047fc5;
+    			font-size: 16px;
+			}
+		}
+	}
+	tbody{
+		tr{
+			cursor: pointer;
+		}
+	}
+}
+
+table#courses.dataTable tbody tr:hover {
+  background-color: #047fc5;
+  color: white;
+}
+ 
+table#courses.dataTable tbody tr:hover > .sorting_1 {
+  background-color: #047fc5;
+  color: white;
+}
+
+.dataTables_wrapper{
+	.dataTables_paginate{
+		.paginate_button{
+			.current{
+		        color: white;
+		        background-color: #047fc5 !important;
+			}
+		}  
+	} 
+}  
+
+
+.dataTables_wrapper{
+	.dataTables_paginate{
+		.paginate_button:hover {              
+	      background-color: #047fc5 !important;
+	      border-radius: 4px;
+	      border: 1px solid #828282;
+	      color: white !important;   
+		}
+	} 
+} 
+

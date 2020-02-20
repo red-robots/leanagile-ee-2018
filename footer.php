@@ -54,6 +54,14 @@ jQuery(document).ready(function($){
 
     $('.checkbox-dropdown-selector').css('display', 'block');
 
+    <?php if ( is_page('4') ) { ?>
+      $('#courses').DataTable({
+        "order": []
+      });
+      $('#courses').on( 'click', 'tbody tr', function () {
+        window.location.href = $(this).attr('href');
+      } );
+    <?php } ?>
     
     
 });

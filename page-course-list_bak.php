@@ -46,25 +46,11 @@ $args = array(
 $the_query = new WP_Query( $args ); ?>
 <?php if ( $the_query->have_posts() ) : ?>
 
-  <table id="courses" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Course</th>
-                <th>Instructor</th>
-                <th>Location</th>               
-                <th>Register</th>
-            </tr>
-        </thead>
-        <tbody>
-
-<!--
 <div class="course-date course-header desktop">Date</div>
 <div class="course-title course-header desktop">Course</div>
 <div class="course-instructor course-header desktop">Instructor</div>
 <div class="course-location course-header desktop">Location</div>
 <div class="course-register course-header desktop">Register</div>
--->
 
 <?php  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				
@@ -82,43 +68,48 @@ if($enddate != '') {
 
  ?>
 
- 
-
-
+<div class="course-row">
+	<a href="<?php the_permalink(); ?>">	
+		<div class="course-date">
 			<?php 
-
-      $date = '';
       // if months match, do like this
       if( $startMonthLetter == $endMonthLetter ) {
-        $date = $startdate->format('M d'); 
+        echo $startdate->format('M d'); 
         if($enddd != '') {
-          $date .= " - " . $enddate->format('d'); 
+          echo " - " . $enddate->format('d'); 
         } 
         // else do like this
       } else {
-        $date = $startdate->format('M d');
+        echo $startdate->format('M d');
         if($enddd != '') {
-          $date .= " - " . $enddate->format('M d');
+          echo " - " . $enddate->format('M d');
         }
         
       }
 
       ?>
+       </div><!-- course date -->
+        
+        <div class="course-title">
+			<div class="course-title course-header mobile">Course</div><?php the_title(); ?>
+       </div><!-- course title -->
+		 
+   		<div class="course-instructor">
+			 <div class="course-instructor course-header mobile">Instructor</div><?php the_field('instructor'); ?>
+       </div><!-- course instructor -->
        
-
-<tr href="<?php echo get_the_permalink(); ?>">
-    <td><?php echo $date; ?></td>
-    <td><?php the_title(); ?></td>
-    <td><?php the_field('instructor'); ?></td>
-    <td><?php the_field('location'); ?></td>
-    <td>Register</td>
- </tr>
+       <div class="course-location">
+	   		  <div class="course-location course-header mobile">Location</div><?php the_field('location'); ?>
+       </div><!-- course location -->
+       
+       <div class="course-register">
+      		<?php //the_field('register'); ?>
+            Register
+       </div><!-- course register -->
+    </a>   
+</div><!-- course row -->
        
 <?php endwhile;  ?>
-
-  </tbody>
-</table>
-
 <?php endif;  ?>
 
 <div class="clear"></div>

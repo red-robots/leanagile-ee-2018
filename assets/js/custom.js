@@ -23,8 +23,6 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('#ee-available-payment-method-inputs-paypal_pro').attr('checked',true);
-	
-	$("label[for='paypal-pro-billing-form-zip']").text("Zipcode or Postal Code");
 
 
 	//$('#paypal-pro-billing-form-country>option:contains(Canada)').insertAfter('#paypal-pro-billing-form-country>option[value=1]');

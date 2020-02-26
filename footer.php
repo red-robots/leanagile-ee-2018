@@ -56,7 +56,10 @@ jQuery(document).ready(function($){
 
     <?php if ( is_page('4') ) { ?>
       $('#courses').DataTable({
-        "order": []
+        "order": [],
+        "pageLength": 20,
+        "lengthChange": true,
+        "lengthMenu": [[10, 20, 25, 50, -1], [10, 20, 25, 50, "All"]]
       });
       $('#courses').on( 'click', 'tbody tr', function () {
         window.location.href = $(this).attr('href');

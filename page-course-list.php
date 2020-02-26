@@ -27,20 +27,20 @@ get_header(); ?>
 <?php // Set up arguments to sort by Start Date from the custom fields.
 $thedate = date("Ymd"); 
 $args = array(
-	'post_type' => 'courses',
-	'posts_per_page' => -1,
-	'meta_key' => 'start_date',
-    'meta_value' => $thedate,
-    'meta_compare' => '>=',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'tax_query' => array(
-        array(
-          'taxonomy' => 'visibility',
-          'field'    => 'slug',
-          'terms'    => 'hidden',
-          'operator' => 'NOT IN'
-        ),
+	   'post_type'       => 'courses',
+	   'posts_per_page'  => -1,
+	   'meta_key'        => 'start_date',
+      'meta_value'      => $thedate,
+      'meta_compare'    => '>=',
+      'orderby'         => 'meta_value',
+      'order'           => 'ASC',
+      'tax_query'       => array(
+                            array(
+                              'taxonomy' => 'visibility',
+                              'field'    => 'slug',
+                              'terms'    => 'hidden',
+                              'operator' => 'NOT IN'
+                            ),
       )
 );
 $the_query = new WP_Query( $args ); ?>
@@ -58,13 +58,6 @@ $the_query = new WP_Query( $args ); ?>
         </thead>
         <tbody>
 
-<!--
-<div class="course-date course-header desktop">Date</div>
-<div class="course-title course-header desktop">Course</div>
-<div class="course-instructor course-header desktop">Instructor</div>
-<div class="course-location course-header desktop">Location</div>
-<div class="course-register course-header desktop">Register</div>
--->
 
 <?php  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				

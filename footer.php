@@ -55,11 +55,27 @@ jQuery(document).ready(function($){
     $('.checkbox-dropdown-selector').css('display', 'block');
 
     <?php if ( is_page('4') ) { ?>
+      jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+          "date-range-pre": function ( a ) {
+              a = a.split('-')[0].trim();
+              return Date.parse(a);   
+          },
+           "date-range-asc": function ( a, b ) {
+              return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+          },
+           "date-range-desc": function ( a, b ) {
+              return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+          }
+      } );
+
       $('#courses').DataTable({
         "order": [],
         "pageLength": 20,
         "lengthChange": true,
-        "lengthMenu": [[10, 20, 25, 50, -1], [10, 20, 25, 50, "All"]]
+        "lengthMenu": [[10, 20, 25, 50, -1], [10, 20, 25, 50, "All"]],
+        columnDefs: [
+           { type: 'date-range', targets: 0 }
+        ]
       });
       $('#courses').on( 'click', 'tbody tr', function () {
         window.location.href = $(this).attr('href');

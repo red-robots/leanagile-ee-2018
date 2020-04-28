@@ -180,7 +180,7 @@ jQuery(document).ready(function ($) {
                     });
                 }
                 // find all ticket rows for this event
-                var $ticket_selector_rows = $ticket_selector.find('.tckt-slctr-tbl-tr');
+                /*var $ticket_selector_rows = $ticket_selector.find('.tckt-slctr-tbl-tr');
                 var x = 0;
                 $.each($ticket_selector_rows, function () {
                     var $ticket_selector_row = $(this);
@@ -226,7 +226,7 @@ jQuery(document).ready(function ($) {
 						//	$qty_input.val( 1 );
 						//}
                     }
-                });
+                });*/
             }
             // enable or disable submit button based on active_rows count
             if (object_exists($submit_button, '$submit_button')) {

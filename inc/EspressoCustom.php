@@ -45,6 +45,11 @@ function lat_add_inline_script_ts_show_sale_info(   ) {
       $custom_js = '
       jQuery(document).ready(function($){
           var j = 0;
+          var $datetime_options = $(".datetime-selector-option");
+          $.each($datetime_options, function () {
+              $(this).prop("checked", true);
+          });
+          $(".tckt-slctr-tbl-tr").addClass("ee-hidden-ticket-tr");
           var remain_arr  = '. json_encode($remain)  .';          
           $("table.tkt-slctr-tbl thead th:last").after("<th class=\'ee-ticket-selector-ticket-remaining-th cntr \' scope=\'col\'> Remaining</th>");
           $("table.tkt-slctr-tbl tbody tr").each(function() { 
@@ -52,6 +57,60 @@ function lat_add_inline_script_ts_show_sale_info(   ) {
             j++;             
           });
           $("select.ticket-selector-tbl-qty-slct:first option[value=\"1\"]").prop("selected", true);
+
+          //  ********** Ticket display ***************
+
+          $(".checkbox-dropdown-selector").on("click",".datetime-selector-option",              
+              function () {
+                  var $datetime_selector_option = $(this);
+                  var event_id = $datetime_selector_option.data("tkt_slctr_evt");
+                  var $submit_button = $("#ticket-selector-submit-" + event_id + "-btn");
+                  // track how many ticket selector rows are active ? ie: being displayed
+                  var active_rows = 0;
+                  var datetimes = [];
+                  var $ticket_selector = $("#tkt-slctr-tbl-" + event_id);
+                  if (object_exists($ticket_selector, "$ticket_selector")) {                      
+                      $datetime_options = $datetime_selector_option.parents("ul").find(".datetime-selector-option");
+                      if (object_exists($datetime_options, "$datetime_options")) {
+                          // add each datetime options to our array of datetimes
+                          $.each($datetime_options, function (index) {
+                              // if checked, then display row and increment active_rows count
+                              if ($(this).prop("checked")) {
+                                  datetimes.push("ee-ticket-datetimes-" + $(this).val());
+                              }
+                          });
+                      }
+                      // find all ticket rows for this event
+                      var $ticket_selector_rows = $ticket_selector.find(".tckt-slctr-tbl-tr");
+                      $.each($ticket_selector_rows, function () {
+                          var $ticket_selector_row = $(this);
+                          // get all of the specific datetime related classes assigned to this ticket row
+                          var ticket_row_datetime_classes = $ticket_selector_row.attr("class").split(" ").filter(
+                              function(element) {
+                                  return element.indexOf("ee-ticket-datetimes-") !== -1;
+                              }
+                          );                         
+                          var display = false;
+                          $.each(ticket_row_datetime_classes, function (index, element) {
+                              if ($.inArray(element, datetimes) !== -1) {
+                                  display = true;
+                              }
+                          });
+                          if (display) {
+                              $ticket_selector_row.removeClass("ee-hidden-ticket-tr");
+                              active_rows++;
+                          } else {
+                              $ticket_selector_row.addClass("ee-hidden-ticket-tr").find(".ticket-selector-tbl-qty-slct").val(0);
+                          }
+                      });
+                  }
+                  
+              }
+          );
+
+          // *********** ticket display  **********
+           
+
       });';
       wp_add_inline_script('ticket_selector', $custom_js);
 

@@ -19,8 +19,12 @@ $event_footer_notification = get_field('event_notification_footer');
 <?php get_template_part('inc/top-page-message'); ?>
 <div class="entry-content">  
            <h1><?php the_title(); ?></h1>
-           </div>
-<?php //get_template_part('inc/steps'); ?>
+
+           <?php if( class_exists('TicketSelectorRowStandard')){
+                echo "Class TicketSelectorRowStandard exists!";
+            } ?>
+</div>
+
 
 
 <div class="page-left">

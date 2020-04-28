@@ -136,7 +136,8 @@ jQuery(document).ready(function ($) {
     // reset by unchecking everything
 	$.each( $datetime_options, function() {
 		$(this).prop( 'checked', true );  
-        $(this).next('.datetime-selector-option-text-spn').html(convert_to_days($(this).val()));     
+        $(this).next('.datetime-selector-option-text-spn').html(convert_to_days($(this).val())); 
+        //console.log($(this).val());    
 	} );
 
     $('.checkbox-dropdown-selector-selected-spn').html('Choose One');

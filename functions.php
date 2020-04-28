@@ -17,6 +17,12 @@
  */
 require get_template_directory() . '/inc/scripts.php';
 
+
+/**
+ * Custom Espresso Class.
+ */
+require get_template_directory() . '/inc/EspressoCustom.php';
+
 /**
  * Custom Post Types.
  */

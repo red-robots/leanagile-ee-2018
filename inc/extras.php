@@ -27,3 +27,14 @@ function acstarter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'acstarter_body_classes' );
+
+
+// 'standard_ticket_selector.template.php'
+
+/*add_filter ('FHEE__EE_Ticket_Selector__display_ticket_selector__template_path', 'my_custom_ticket_selector_template_location');
+
+function my_custom_ticket_selector_template_location( $event ){
+    require get_template_directory() . '/template-parts/standard_ticket_selector.template.php';
+}*/
+
+

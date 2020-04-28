@@ -49,7 +49,9 @@ function lat_add_inline_script_ts_show_sale_info(   ) {
           $.each($datetime_options, function () {
               $(this).prop("checked", true);
           });
-          $(".tckt-slctr-tbl-tr").addClass("ee-hidden-ticket-tr");
+          if( $(".checkbox-dropdown-selector")[0] ){
+            $(".tckt-slctr-tbl-tr").addClass("ee-hidden-ticket-tr");
+          }          
           var remain_arr  = '. json_encode($remain)  .';          
           $("table.tkt-slctr-tbl thead th:last").after("<th class=\'ee-ticket-selector-ticket-remaining-th cntr \' scope=\'col\'> Remaining</th>");
           $("table.tkt-slctr-tbl tbody tr").each(function() { 

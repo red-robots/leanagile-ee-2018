@@ -53,9 +53,9 @@ function lat_add_inline_script_ts_show_sale_info(   ) {
             $(".tckt-slctr-tbl-tr").addClass("ee-hidden-ticket-tr");
           }          
           var remain_arr  = '. json_encode($remain)  .';          
-          $("table.tkt-slctr-tbl thead th:last").after("<th class=\'ee-ticket-selector-ticket-remaining-th cntr \' scope=\'col\'> Remaining</th>");
+          //$("table.tkt-slctr-tbl thead th:last").after("<th class=\'ee-ticket-selector-ticket-remaining-th cntr \' scope=\'col\'> Remaining</th>");
           $("table.tkt-slctr-tbl tbody tr").each(function() { 
-            $(this).find("td:last").after("<td class=\' cntr \'>"+remain_arr[j]+"</td>"); 
+            //$(this).find("td:last").after("<td class=\' cntr \'>"+remain_arr[j]+"</td>"); 
             j++;             
           });
           $("select.ticket-selector-tbl-qty-slct:first option[value=\"1\"]").prop("selected", true);

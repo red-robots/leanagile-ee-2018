@@ -126,7 +126,8 @@ $the_query = new WP_Query( $args ); ?>
 
             <div class="sidebar-home-connect">Connect With Us</div>
 
-            <a class="twitter-timeline" href="https://s.com/jhlittle">Tweets by @jhlittle</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+            <!-- <a class="twitter-timeline" href="https://s.com/jhlittle">Tweets by @jhlittle</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script> -->
+	<a class="twitter-timeline" href="https://s.com/XDevelopers">Posts by XDevelopers</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
             <!-- <a class="twitter-timeline" href="https://twitter.com/jhlittle" data-widget-id="438340873932128256">Tweets by @jhlittle</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
